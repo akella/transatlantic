@@ -1,10 +1,32 @@
 // default layout
-.l
-	width: 100%
-	display: inline-block
-	.l-col1
-		float: left
-		width: 20%
-	.l-col2
-		float: right
-		width: 70%
+$h1: 33px
+$h2: 272px
+$h3: 180px
+html,body
+	height: 100%
+	position: relative 
+	min-height: 700px 
+	overflow: hidden
+.l-video
+	position: absolute
+	left: 0
+	right: 0
+	top: $h1 
+	height: $h2
+	background: #1B1B1B 
+.l-controls
+	position: absolute
+	top: $h1 + $h2
+	left: 0
+	right: 0
+	height: $h3
+	background: #1B1B1B 
+	z-index: 10 
+.l-audios
+	position: absolute
+	top: $h1+$h2+$h3
+	left: 0
+	right: 0
+	bottom: 0   
+	overflow: auto
+	z-index: 2 

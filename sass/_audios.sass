@@ -1,0 +1,189 @@
+.audios
+	.audios__head
+		height: 26px 
+		//@include opacity(.3)
+		+g(#1B1B1B,#161616)
+		position: relative
+		padding-left: 6px 
+		padding-right: 6px 
+		line-height: 26px 
+		+box-shadow(0 4px 10px rgba(0,0,0,.6))
+	.audios__fill
+		+g(#404F42,#2E4030)
+		position: absolute
+		height: 100%
+		top: 0
+		left: 13%   
+		width: 50% 
+		z-index: 1 
+	.audios__icon
+		vertical-align: middle
+		+s(folder)
+		margin-right: 8px 
+		display: inline-block
+		position: relative
+		z-index: 2 
+	&.color1
+		.audios__icon
+			+s(folder1)
+		.audios__fill
+			+g(#4F4840, #453A31)
+	&.color2
+		.audios__icon
+			+s(folder2)
+		.audios__fill
+			+g(#38373E,#2D2B33)
+	.audios__title
+		+opacity(.4)
+		color: #fffeff
+		font-family: "LucidaSans", sans-serif
+		font-size: 12px
+		+text-shadow(0 -1px 1px #000)
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		z-index: 2
+		margin-right: 5px 
+	.audios__meta
+		@include opacity(.4)
+		color: #fffeff
+		font-family: "Tahoma",sans-serif
+		font-size: 11px
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		z-index: 2
+		margin-right: 5px 
+	.audios__flags
+		@include opacity(.2)
+		color: #fffeff
+		font-family: "Tahoma",sans-serif
+		font-size: 11px
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		z-index: 2
+	.audios__resample
+		position: absolute
+		right: 0
+		top: 0px  
+		z-index: 2
+		height: 26px 
+		line-height: 26px 
+		.audios__label
+			color: #fff
+			opacity: .4
+			font-size: 11px   
+			text-transform: uppercase
+			vertical-align: middle
+			display: inline-block
+			vertical-align: top
+			height: 26px 
+		.audios__range
+			display: inline-block
+			vertical-align: middle
+			margin: 0 23px 0 10px
+			width: 330px 
+			padding-top: 12px 
+			vertical-align: top
+			background: url(../img/shkala.png) repeat-x 0 5px 
+			input
+				width: 330px 
+				&::-webkit-slider-thumb
+					+s(thumb)
+					border: thin
+					box-shadow: none
+		.audios__hz
+			display: inline-block
+			font-size: 18px 
+			+mono
+			color: #cbcbcb 
+			opacity: .4 
+			vertical-align: top
+			margin-right: 10px 
+	.audios__content
+		position: relative
+	.audios__manual
+		border: 1px solid #bbb
+		@include box-shadow(inset 0 0 5px rgba(0,0,0,.4))
+		height: 26px 
+		background: #fff
+		vertical-align: top
+		display: inline-block
+		padding: 0 10px
+		line-height: 26px
+		color: #094444
+		font-size: 18px
+		+mono
+		b
+			font-weight: normal
+			color: #ACACAC
+	.audios__ok
+		vertical-align: middle
+		border-radius: 4px
+		border: 1px solid #000 
+		margin: 0 7px
+		text-decoration: none
+		@include background-image(linear-gradient(bottom, rgba(0,0,0,.7) 0%, rgba(68,68,68,.7) 25%, rgba(85,85,85,.7) 75%, rgba(85,85,85,.7) 75.24%, rgba(119,119,119,.7) 100%))
+		color: #cbcbcb
+		font-size: 11px
+		@include text-shadow(0 -1px 1px #000)
+		height: 21px 
+		line-height: 21px
+		padding: 0 11px 0 6px  
+		display: inline-block
+		position: relative
+		top: 2px 
+		i
+			+s(check)
+			margin-right: 4px 
+			display: inline-block
+			 
+	.audios__cancel
+		vertical-align: middle
+		font-size: 11px 
+		color: #fff
+		opacity: .3  
+		border-bottom: 1px dotted rgba(#fff, 1) 
+		text-decoration: none
+		
+		
+	&.is-resampling
+		.audios__resampling
+			position: absolute
+			left: 0
+			top: 0
+			right: 0
+			bottom: 0    
+			z-index: 100
+			background: rgba(#000, .7)  url(../img/transatlanticprogress.gif) no-repeat 50% 50%
+.audio
+	// border-bottom: 1px solid #66A06A 
+	box-shadow: inset 0 -1px 0 rgba(#66A06A, .5)
+	height: 50px 
+	position: relative
+	overflow: hidden
+	width: 100% 
+	.color1 &
+		box-shadow: inset 0 -1px 0 rgba(#FEC195, .5)
+	.color2 &
+		box-shadow: inset 0 -1px 0 rgba(#837CA2, .5)
+	.audio__title
+		position: absolute
+		left: 5px 
+		top: 5px 
+		color: #777
+		font-family: "LucidaSans", sans-serif
+		font-size: 11px 
+		padding: 4px 
+		background: rgba(#000, .3) 
+		z-index: 2 
+		border-radius: 10px
+		+transition(all .2s linear)
+	&:hover
+		.audio__title
+			color: #fff 
+	img
+		opacity: .5 
+		position: relative
+		z-index: 2 

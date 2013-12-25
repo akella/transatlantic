@@ -1,0 +1,112 @@
+.video
+	text-align: center
+	position: relative
+	.video__controls
+		position: absolute
+		left: 0
+		top: 0 
+		padding: 20px 0 0 20px  
+		text-align: left
+
+.timecode
+	display: block
+	color: #777
+	margin-bottom: 15px 
+	.timecode__label
+		font-size: 11px
+		text-transform: uppercase
+	.timecode__value
+		font-size: 24px
+		+mono
+		line-height: 1
+		padding: 0
+		border: none
+		background: transparent
+		color: #777777
+		&:focus
+			outline: none
+	.is-tapetimecode &.timecode_tape, .is-timecode_tape &.timecode_tape,
+	.is-standardtimecode &.timecode_standard, .is-timecode_standart &.timecode_standard,
+	.is-frametimecode &.timecode_frame,.is-timecode_frame &.timecode_frame,
+	.is-timecode_sample &.timecode_sample
+		.timecode__value
+			color: #ccc
+
+
+.controls
+	margin-bottom: 13px 
+	.controls__play,.controls__back, .controls__forw,.controls__pause
+		@extend %button
+		width: 46px
+		padding: 0
+		text-align: center
+		margin-left: 1px
+		vertical-align: middle
+		i
+			display: inline-block
+			position: relative
+			top: 2px
+			opacity: .7
+	.controls__pause
+		width: 66px
+		i
+			+s(control_play)
+	.controls__play
+		width: 66px
+		i
+			+s(control_playgo)
+	.controls__back
+		border-top-left-radius: 3px
+		border-bottom-left-radius: 3px
+		i
+			+s(control_back)
+	.controls__forw
+		border-top-right-radius: 3px
+		border-bottom-right-radius: 3px
+		i
+			+s(control_forw)
+.zoom
+	width: 260px 
+	.zoom__in
+		+s(zoom)
+		display: inline-block
+		vertical-align: middle
+	.zoom__out
+		+s(zoombig)
+		display: inline-block
+		vertical-align: middle
+	input
+		display: inline-block
+	.zoom__value
+		font-size: 11px 
+		color: #777777 
+		vertical-align: middle
+		margin-left: 10px 
+		display: inline-block
+
+		// input[type=checkbox]
+		// 	font-size: 16px
+		// 	position: relative
+		// 	border: 1px solid #2F2F2F
+		// 	display: inline-block
+		// 	line-height: 1em
+		// 	margin: 0 5px 0 0
+		// 	width: 1em
+		// 	height: 1em
+		// 	vertical-align: text-top
+		// 	background: #3A3A3A
+		// 	-webkit-appearance: none
+		// 	-webkit-box-shadow: inset 1px 1px 3px rgba(black, 0.3)
+		// input[type=checkbox]:active
+		// 	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.2))
+		// input[type=checkbox]:checked::after
+		// 	position: absolute
+		// 	content: ''
+		// 	left: 15%
+		// 	top: 10%
+		// 	height: 40%
+		// 	width: 60%
+		// 	border-bottom: 2px solid #8D8D8D
+		// 	border-left: 2px solid #8D8D8D
+		// 	-webkit-box-shadow: -1px 1px 0 rgba(0, 0, 0, 0.8)
+		// 	-webkit-transform: rotate(-45deg)

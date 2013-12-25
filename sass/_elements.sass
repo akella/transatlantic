@@ -1,0 +1,43 @@
+%button
+	color: #cbcbcb
+	color: #8F8F8F
+	font-size: 12px
+	//@include text-shadow(0 -1px 1px #000);
+	height: 23px
+	line-height: 24px
+	display: inline-block
+	padding: 0 10px
+	border: 1px solid #000
+	cursor: pointer
+	+background-image(linear-gradient(top, #424242 0%, #3b3b3b 15%, #343434 85%, #282828 100%))
+	&:hover
+		//@include background-image(linear-gradient(bottom, darken(#717171,10%) 0%, darken(#282828,10%) 100%));
+	&:active, &.is-pressed, &.is-active
+		//@include background-image(linear-gradient(bottom, darken(#717171,10%) 0%, darken(#282828,10%) 100%));
+		//@include background-image(linear-gradient(bottom, #282828 0%, #717171 100%));
+		+background-image(linear-gradient(bottom, #424242 0%, #3b3b3b 15%, #292929 85%, #1a1a1a 100%))
+		color: #606060
+		text-shadow: none
+
+input[type=range]
+	border: 1px solid #474747 
+	height: 4px
+	background: #2E2E2E 
+	-webkit-appearance: none
+	border-radius: 10px
+	display: block
+	&:focus
+		outline: none
+	&::-webkit-slider-thumb
+		-webkit-appearance: none
+		height: 10px 
+		width: 10px 
+		border-radius: 10px
+		border: 1px solid rgba(204,204,204,.6)
+		+box-shadow(1px 2px 5px rgba(0,0,0,.8))
+		+background-image(linear-gradient(bottom, #000 0, rgba(54,54,54,0) 100%))
+	&.vertical
+		+rotate(90)
+		+transform-origin(0,0)
+		&::-webkit-slider-thumb
+			-webkit-appearance: none
